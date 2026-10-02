@@ -7,10 +7,8 @@
 
 const SITE_CONFIG = {
   /* Número do WhatsApp no formato: 55 + DDD + número
-     Exemplo: "5551999999999"
-     Enquanto o valor for "[INSERIR WHATSAPP]", os botões
-     continuam levando à seção de agendamento do site.        */
-  whatsapp: "[INSERIR WHATSAPP]",
+     Exemplo: "5555991140659"                              */
+  whatsapp: "5555991140659",
 
   /* Mensagem automática enviada ao clicar em Agendar */
   mensagem: "Olá, Dra. Charline! Gostaria de agendar um atendimento.",
