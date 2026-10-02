@@ -11,11 +11,7 @@ const SITE_CONFIG = {
   whatsapp: "5555991140659",
 
   /* Mensagem automática enviada ao clicar em Agendar */
-  mensagem: "Olá, Dra. Charline! Gostaria de agendar um atendimento.",
-
-  /* Link completo do Instagram
-     Exemplo: "https://www.instagram.com/charline.margotti"   */
-  instagram: "[INSERIR INSTAGRAM]"
+  mensagem: "Olá, Dra. Charline! Gostaria de agendar um atendimento."
 };
 
 /* =========================================================
@@ -29,27 +25,16 @@ const SITE_CONFIG = {
   /* ---------- 1. Links de contato ---------- */
   function montarWhatsapp() {
     const numero = SITE_CONFIG.whatsapp.replace(/\D/g, "");
-    if (!numero || SITE_CONFIG.whatsapp.indexOf("[") === 0) return null;
+    if (!numero) return null;
     const texto = encodeURIComponent(SITE_CONFIG.mensagem || "");
     return "https://wa.me/" + numero + (texto ? "?text=" + texto : "");
   }
 
   const urlWhats = montarWhatsapp();
-  const instaOK = SITE_CONFIG.instagram &&
-                  SITE_CONFIG.instagram.indexOf("[") !== 0 &&
-                  SITE_CONFIG.instagram.trim() !== "";
 
   document.querySelectorAll("[data-whatsapp]").forEach(function (el) {
     if (urlWhats) {
       el.setAttribute("href", urlWhats);
-      el.setAttribute("target", "_blank");
-      el.setAttribute("rel", "noopener");
-    }
-  });
-
-  document.querySelectorAll("[data-instagram]").forEach(function (el) {
-    if (instaOK) {
-      el.setAttribute("href", SITE_CONFIG.instagram.trim());
       el.setAttribute("target", "_blank");
       el.setAttribute("rel", "noopener");
     }

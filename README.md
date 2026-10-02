@@ -22,19 +22,18 @@ Basta abrir `index.html` no navegador. Para melhor resultado (mapa, fontes e SEO
 npx serve .
 ```
 
-## Configurar WhatsApp e Instagram
+## Configurar WhatsApp
 
 Edite o topo de `assets/js/main.js`:
 
 ```js
 const SITE_CONFIG = {
-  whatsapp: "[INSERIR WHATSAPP]",   // Ex.: "5551999999999"
-  mensagem: "Olá, Dra. Charline! Gostaria de agendar um atendimento.",
-  instagram: "[INSERIR INSTAGRAM]"  // Ex.: "https://www.instagram.com/..."
+  whatsapp: "5555991140659",  // 55 (Brasil) + 55 (DDD) + número
+  mensagem: "Olá, Dra. Charline! Gostaria de agendar um atendimento."
 };
 ```
 
-Enquanto os valores forem os placeholders, os botões **Agendar** levam à própria seção de agendamento do site. Assim que o número for preenchido, todos os botões passam a abrir o WhatsApp com a mensagem automática (inclusive o botão flutuante).
+Todos os botões **Agendar**, o link **WhatsApp** (CTA final e footer) e o botão flutuante abrem a conversa com a mensagem automática.
 
 ## Conteúdo editável
 
